@@ -1,6 +1,8 @@
-﻿using Basket.Application.Handlers;
+﻿using Basket.Application.GrpcService;
+using Basket.Application.Handlers;
 using Basket.Core.Repositories;
 using Basket.Infrastructure.Repositories;
+using Discount.Grpc.Protos;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -31,7 +33,10 @@ public class Startup
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<CreateShoppingCartCommandHandler>());
         services.AddScoped<IBasketRepository, BasketRepository>();
         services.AddAutoMapper(typeof(Startup));
-        
+        services.AddScoped<DiscountGrpcService>();
+        services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
+            (o => o.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
+                    
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo() {Title = "Basket.API", Version = "v1"});
