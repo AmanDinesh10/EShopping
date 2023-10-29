@@ -44,6 +44,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{DC94F73D-8A8C-4641-916C-AECC706E24DD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9FC8A97A-A1FF-4A11-A0B7-B596274B65A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "Infrastructure\EventBus.Messages\EventBus.Messages.csproj", "{71FA6506-80C5-4A84-A0B1-FE305AD767F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{1A196DE8-59BB-4C27-864C-B679123694F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelot.ApiGateway", "ApiGateways\Ocelot.ApiGateway\Ocelot.ApiGateway.csproj", "{8A955371-FED3-451E-A8EC-78D6CA03D8E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +78,8 @@ Global
 		{DC49F01C-2F4B-47C0-A15E-5A54C0EA3B8B} = {ABBDE573-5952-4BD6-A5F5-FDFAE2E36C38}
 		{0195DF1D-05D5-4FD4-B3E1-C4265D3E128F} = {ABBDE573-5952-4BD6-A5F5-FDFAE2E36C38}
 		{DC94F73D-8A8C-4641-916C-AECC706E24DD} = {ABBDE573-5952-4BD6-A5F5-FDFAE2E36C38}
+		{71FA6506-80C5-4A84-A0B1-FE305AD767F5} = {9FC8A97A-A1FF-4A11-A0B7-B596274B65A4}
+		{8A955371-FED3-451E-A8EC-78D6CA03D8E3} = {1A196DE8-59BB-4C27-864C-B679123694F0}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C898EC1F-CE7E-48A1-B5FA-A22DFB2E7B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -136,5 +146,13 @@ Global
 		{DC94F73D-8A8C-4641-916C-AECC706E24DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC94F73D-8A8C-4641-916C-AECC706E24DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC94F73D-8A8C-4641-916C-AECC706E24DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71FA6506-80C5-4A84-A0B1-FE305AD767F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71FA6506-80C5-4A84-A0B1-FE305AD767F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71FA6506-80C5-4A84-A0B1-FE305AD767F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71FA6506-80C5-4A84-A0B1-FE305AD767F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A955371-FED3-451E-A8EC-78D6CA03D8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A955371-FED3-451E-A8EC-78D6CA03D8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A955371-FED3-451E-A8EC-78D6CA03D8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A955371-FED3-451E-A8EC-78D6CA03D8E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
